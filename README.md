@@ -17,9 +17,8 @@ This guide provides step-by-step instructions for setting up an OpenVPN server a
    ```sh
    sudo apt update
    sudo apt install openvpn easy-rsa
-```
-1. **Install OpenVPN and Easy-RSA:**
+
+#### 2. **Install OpenVPN and Easy-RSA:**
    ```sh
    sudo apt update
    sudo apt install openvpn easy-rsa
-```
