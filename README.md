@@ -18,9 +18,7 @@ https://github.com/BaraahM/Building-VPN/blob/main/README.md
    sudo apt update
    sudo apt install openvpn easy-rsa ```
 2.Install OpenVPN and Easy-RSA:
-    ```
-   make-cadir ~/openvpn-ca
-   cd ~/openvpn-ca
-   cp /usr/share/easy-rsa/vars.example ./vars ```
-
+   ```
+   sudo apt update
+   sudo apt install openvpn easy-rsa ```
    
