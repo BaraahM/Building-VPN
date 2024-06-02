@@ -16,9 +16,27 @@ https://github.com/BaraahM/Building-VPN/blob/main/README.md
 1. Install OpenVPN and Easy-RSA:
    ```
    sudo apt update
-   sudo apt install openvpn easy-rsa ```
-2.Install OpenVPN and Easy-RSA:
+   sudo apt install openvpn easy-rsa 
+2. Set Up the Easy-RSA Environment:
    ```
-   sudo apt update
-   sudo apt install openvpn easy-rsa ```
+   make-cadir ~/openvpn-ca
+   cd ~/openvpn-ca
+   cp /usr/share/easy-rsa/vars.example ./vars 
+3. itialize the PKI::
+   ```
+   ./easyrsa init-pki
+   ./easyrsa build-ca
+4. Generate the Server Certificate and Key:
+   ```
+   ./easyrsa gen-req server nopass
+   ./easyrsa sign-req server server
+5. itialize the PKI::
+   ```
+   ./easyrsa gen-dh
+   openvpn --genkey --secret ta.key
+6. Generate the Server Certificate and Key:
+   ```
+   sudo cp pki/ca.crt pki/issued/server.crt pki/private/server.key pki/dh.pem ta.key/etc/openvpn
+
+
    
