@@ -1,7 +1,7 @@
 # OpenVPN Setup and Configuration
 
 This guide provides step-by-step instructions for setting up an OpenVPN server and configuring a client to connect to it.
-
+https://github.com/BaraahM/Building-VPN/blob/main/README.md
 ## Prerequisites
 
 - A server running a Unix-based operating system (e.g., Ubuntu, macOS).
@@ -13,12 +13,14 @@ This guide provides step-by-step instructions for setting up an OpenVPN server a
 
 ### On the Server
 
-1. **Install OpenVPN and Easy-RSA:**
-   ```sh
+1. Install OpenVPN and Easy-RSA:
+   ```
    sudo apt update
-   sudo apt install openvpn easy-rsa
+   sudo apt install openvpn easy-rsa ```
+2.Install OpenVPN and Easy-RSA:
+    ```
+   make-cadir ~/openvpn-ca
+   cd ~/openvpn-ca
+   cp /usr/share/easy-rsa/vars.example ./vars ```
 
-#### 2. **Install OpenVPN and Easy-RSA:**
-   ```sh
-   sudo apt update
-   sudo apt install openvpn easy-rsa
+   
