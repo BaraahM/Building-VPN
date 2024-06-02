@@ -37,7 +37,9 @@ This guide provides step-by-step instructions for setting up an OpenVPN server a
    ```
    sudo cp pki/ca.crt pki/issued/server.crt pki/private/server.key pki/dh.pem ta.key/etc/openvpn
 
-## Step 1: Configure the OpenVPN Server
+   
+
+## Step 2: Configure the OpenVPN Server
 
 1. Create the Server Configuration File:
    ```
@@ -84,5 +86,27 @@ This guide provides step-by-step instructions for setting up an OpenVPN server a
 6. Set Correct Permissions:
    ```
    sudo tail -f /var/log/openvpn.log
+
+
+## Step 3: Set Up the Client
+
+
+1. Create a Client Configuration File:
+   ```
+   nano ~/client1.ovpn
+2. Add the Following Configuration to client1.ovpn:
+   ```
+   ..
+3. Transfer the Necessary Files to the Client:
+   Ensure the client has the following files:
+   - client1.ovpn
+   - ca.crt
+   - client1.crt
+   - client1.key
+   - ta.key
+4. Connect to the VPN:
+   ```
+   sudo openvpn --config ~/client1.ovpn
+5. Finally, Verify the Connection.
 
    
